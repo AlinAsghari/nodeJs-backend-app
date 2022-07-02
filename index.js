@@ -29,7 +29,7 @@ app.use("/api/expoPushTokens", expoPushTokens);
 app.use("/api/messages", messages);
 
 console.log(config);
-const port = process.env.PORT || 8000; //config.get("port")
+const port = process.env.PORT || config.get("port"); //8000; //
 
 app.listen(port, function() {
   console.log(`Server started on port ${port}...`);
